@@ -9,6 +9,8 @@ python main.py
 CONTROLES:
 ESPACIO = SALTAR
 
+ESCRIBIR EN LA TERMINAL PARA JUGAR: py -3.10 main.py 
+
 SPRITES: 
 - https://www.vecteezy.com/free-png/pixel-background?page=9
 - https://pixelartmaker.com/art/8afdf6b0f55c0d6
