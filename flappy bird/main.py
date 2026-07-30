@@ -59,8 +59,9 @@ def colision(paj_y, tub_x, alt_tub):
     tam_paj = 80
     hit = 28           
 
-    izq = paj_x + (tam_paj//2 - hit)
-    der = paj_x + (tam_paj//2 + hit)
+    offset_x=-25
+    izq = paj_x + (tam_paj//2 - hit) + offset_x
+    der = paj_x + (tam_paj//2 + hit) + offset_x
     arriba = paj_y + (tam_paj//2 - hit) + margen
     abajo = paj_y + (tam_paj//2 + hit) - margen
 
