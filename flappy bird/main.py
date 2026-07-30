@@ -4,16 +4,16 @@ import sys
 
 pygame.init()
 
-# pantalla
+#pantalla
 ANC = 400
 ALT = 600
 pant = pygame.display.set_mode((ANC, ALT))
 pygame.display.set_caption("Flappy Bird")
 
-# tiempo
+#tiempo
 clk = pygame.time.Clock()
 
-# fuente
+#fuente
 fnt = pygame.font.SysFont(None, 40)
 
 #sprites
@@ -55,27 +55,27 @@ def dib_tub(x, alt):
 #colision
 def colision(paj_y, tub_x, alt_tub):
 
-    margen = 10        # ajusta dificultad
+    margen = 15       
     tam_paj = 80
-    hit = 28           # 🔥 tamaño real del cuerpo (ajustado a tu sprite)
+    hit = 28           
 
     izq = paj_x + (tam_paj//2 - hit)
     der = paj_x + (tam_paj//2 + hit)
     arriba = paj_y + (tam_paj//2 - hit) + margen
     abajo = paj_y + (tam_paj//2 + hit) - margen
 
-    # bordes pantalla
+    #bordes pantalla
     if arriba < 0 or abajo > ALT:
         return True
 
-    # colisión horizontal real
+    #colision x
     if der > tub_x and izq < tub_x + anc_tub:
 
-        # tubo arriba
+        #tubo arriba
         if arriba < alt_tub:
             return True
 
-        # tubo abajo
+        #tubo abajo
         if abajo > alt_tub + gap:
             return True
 
