@@ -16,7 +16,7 @@ clk = pygame.time.Clock()
 # fuente
 fnt = pygame.font.SysFont(None, 40)
 
-# ===== SPRITES =====
+#sprites
 paj_img = pygame.image.load("imgs/paj.png").convert_alpha()
 paj_img = pygame.transform.scale(paj_img, (80, 80))
 
@@ -52,7 +52,7 @@ def dib_tub(x, alt):
     pant.blit(tub_img, (x, alt + gap))
 
 
-# 🔥 ===== COLISION ARREGLADA ===== 🔥
+#colision
 def colision(paj_y, tub_x, alt_tub):
 
     margen = 10        # ajusta dificultad
@@ -82,7 +82,7 @@ def colision(paj_y, tub_x, alt_tub):
     return False
 
 
-# ===== LOOP =====
+#loop
 while True:
     pant.fill((135, 206, 250))
 
